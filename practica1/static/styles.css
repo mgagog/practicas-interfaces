@@ -1,0 +1,84 @@
+.menu{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color:#dceeee;
+  border-color: dodgerblue;
+  border-style: inset;
+  border-width: 2px;
+  height: 40px;
+}
+
+a { 
+  color:black;
+  text-decoration: none;
+  font-size: 30px;
+} /* Globally */
+
+a.selected {
+  color: grey;
+}
+
+/* Each state */
+a:hover { 
+  text-decoration: underline;
+  color:blue; 
+}
+form {
+  height: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  border-width: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+input[type=number] {
+  width: 50px;
+}
+.list {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.list.airport {
+  justify-content: center;
+}
+
+.list.recipe {
+  justify-content: space-between;
+}
+
+.card {
+  width: 500px;
+  border-style: solid;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.card:hover {
+  background-color: #f5f5f5;
+  box-shadow:  0px 0px 20px 1px grey;
+}
+
+.card.airport {
+
+}
+
+.card.jokes {
+
+}
+
+.card.recipe {
+  margin: 8px;
+}
+
