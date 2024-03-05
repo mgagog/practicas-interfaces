@@ -8,19 +8,19 @@ const Recipe: FunctionComponent<RecipeProps> = (props) =>{
     const separatedIngredients = ingredients.split("|");
     const separatedInstructions = instructions.split(".");
     return (
-        <div class="card recipe">
-            <h2 class="cardTitle">{title}</h2>
+        <div class="card">
+            <h2 class="centeredTitle">{title}</h2>
             <p><strong>Servings: </strong>{servings}</p>
             <p><strong>Ingredients: </strong></p>
             <ul>
-                {separatedIngredients.map(ing => {
-                    return <li key={separatedIngredients.indexOf(ing)}><p>{ing}</p></li>;
+                {separatedIngredients.map((ing, index) => {
+                    return <li key={index}><p>{ing}</p></li>;
                 })}
             </ul>
             <p><strong>Instructions: </strong></p>
             <ul>
-            {separatedInstructions.map(ins => {
-                    if (ins) return <li key={separatedInstructions.indexOf(ins)}><p>{ins}</p></li>;
+            {separatedInstructions.map((ins, index) => {
+                    if (ins) return <li key={index}><p>{ins}</p></li>;
                 })}
             </ul>
             

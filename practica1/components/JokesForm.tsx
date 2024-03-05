@@ -8,15 +8,10 @@ const AirportForm: FunctionComponent<FormProps> = (props) => {
     <div>
       <form method="get">
         <div>
-          Enter the number of jokes you want: &#127908;<br />
-          <input
-            type="number"
-            min={1}
-            max={10}
-            name="limit"
-            value={limit || ""}
+          Enter the number of jokes you want &#40;up to 10&#41;: &#127908;<br />
+          <input type="number" min={1} max={10} name="limit" value={limit || ""}
           />&nbsp;
-          <button type="submit">Shuffle</button>
+          <button type="submit">Search</button>
         </div>
       </form>
       <div class="list jokes">

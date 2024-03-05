@@ -10,10 +10,10 @@ const Jokes: FunctionComponent<JokesProps> = (props) =>{
         <>
         {
             props.jokes.length > 0 &&
-            <div class="card jokes">
+            <div class="card">
                 <ul>
-                {props.jokes.map((joke) => {
-                    return <li key={props.jokes.indexOf(joke)}><p>{joke.joke}</p></li>;
+                {props.jokes.map((joke, index) => {
+                    return <li key={index}><p>{joke.joke}</p></li>;
                 })}
                 </ul>
             </div>

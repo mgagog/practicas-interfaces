@@ -14,13 +14,13 @@ a {
   color:black;
   text-decoration: none;
   font-size: 30px;
-} /* Globally */
+}
 
 a.selected {
   color: grey;
 }
 
-/* Each state */
+
 a:hover { 
   text-decoration: underline;
   color:blue; 
@@ -31,17 +31,36 @@ form {
   font-size: 25px;
   display: flex;
   align-items: center;
+  line-height: 125%;
 }
 
 input {
   border-width: 2px;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
 
 input[type=number] {
   width: 50px;
 }
+
+button[type=submit] {
+  background-color: #dddddd;
+  border-style: solid;
+  border-width: 2px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+button:hover {
+  text-decoration:underline;
+  box-shadow:  0px 0px 10px grey;
+}
+
+button:active {
+  background-color: darkblue;
+  color: white;
+}
+
 .list {
   display: flex;
   flex-flow: column wrap;
@@ -52,17 +71,22 @@ input[type=number] {
   justify-content: center;
 }
 
-.list.recipe {
-  justify-content: space-between;
+.list.string {
+  text-align: left;
 }
 
 .card {
-  width: 500px;
+  font-family: "Verdana, Geneva, Tahoma, sans-serif";
+  font-size: 23px;
+  width: 490px;
   border-style: solid;
   border-radius: 15px;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  margin: 8px;
+  padding: 0% 10px;
+  text-align: center;
 }
 
 .card:hover {
@@ -70,15 +94,7 @@ input[type=number] {
   box-shadow:  0px 0px 20px 1px grey;
 }
 
-.card.airport {
-
-}
-
-.card.jokes {
-
-}
-
-.card.recipe {
-  margin: 8px;
+ul {
+  text-align: left;
 }
 

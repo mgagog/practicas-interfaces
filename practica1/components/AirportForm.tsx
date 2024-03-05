@@ -6,14 +6,15 @@ const AirportForm: FunctionComponent<FormProps> = (props) => {
   const { airports, search } = props;
   return (
     <div>
-      <form method="get" class="airportForm">
+      <form method="get">
         <div>
-          Enter the name of the airport: &#9992;&#65039;<br />
+          Enter the name of the airport: &#9992;&#65039;<br/>
           <input
             type="text"
             name="search"
             value={search || ""}
             class="airportInput"
+            placeholder="Barajas, Newark..."
           />&nbsp;
           <button type="submit">Search</button>
         </div>

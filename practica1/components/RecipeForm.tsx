@@ -9,12 +9,12 @@ const RecipeForm: FunctionComponent<FormProps> = (props) => {
       <form method="get">
         <div>
           Enter the name of the recipe: &#127860;<br />
-          <input type="text" name="query" value={query || ""} />&nbsp;
+          <input type="text" name="query" value={query || ""} placeholder="Tacos, paella..."/>&nbsp;
           <button type="submit">Search</button>
         </div>
       </form>
 
-      <div class="list recipe">
+      <div class="list">
         {recipes.map((recipe) => (
           <Recipe
             title={recipe.title}
