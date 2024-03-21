@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.header_and_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.header {
+  color: white;
+  background-color: rgb(0, 128, 255);
+}
+
+.header_text {
+  padding-left: 10px;
+}
+.job_list {
+  overflow-y: auto;
+  max-height:84dvh;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  padding-left: 8px;
+  padding-top: 8px;
+}
+
+.job_simple {
+  display: flex;
+  flex-flow: row nowrap;
+  padding-bottom: 10px;
+}
+
+.job_simple.selected {
+  background-color: rgb(202, 222, 239);
+}
+
+.simple_info {
+  padding-left: 5px;
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.simple_info .title {
+  color:rgb(0, 128, 255);
+  font-size: 20px;
+}
+
+.simple_info .location {
+  color: rgb(80, 80, 80);
+}
+
+.simple_info .contacts {
+  color: rgb(80, 80, 80);
+  font-size: 15px;
+}
+
+.cross {
+  margin-left: auto;
+  padding-top: 8px;
+  padding-right: 5px;
+}
+
+.job_detailed {
+  overflow-y: auto;
+  max-height: 99dvh;
+  width: 80%;
+}
+
+.detailed_info {
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detailed_info .title{
+  font-size: 25px;
+}
+
+.detailed_info .info_extra {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon {
+  height: 35px;
+  width: 35px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px
+}
+
+button {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 15px 5px;
+  border-style: solid;
+  border-color: rgb(0, 128, 255);
+  border-radius: 27px;
+  color: rgb(0, 128, 255);
+  background-color: white;
+}
+
+button.apply {
+  background-color: rgb(0, 128, 255);
+  color: white;
+}
+
+button:hover {
+  background-color: blue;
+  border-color: blue;
+  color: white;
+}
