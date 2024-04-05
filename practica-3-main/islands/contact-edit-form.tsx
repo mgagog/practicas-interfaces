@@ -34,34 +34,36 @@ export default function EditContactForm(
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   function validateForm() {
+    let isValid = true;
     const newFormData = { ...formData };
     if (!newFormData.name.value) {
       newFormData.name.error = "Name is required";
+      isValid = false;
     } else {
       newFormData.name.error = "";
     }
 
     if (!newFormData.lastName.value) {
       newFormData.lastName.error = "Last Name is required";
+      isValid = false;
     } else {
       newFormData.lastName.error = "";
     }
 
     if (!newFormData.email.value) {
       newFormData.email.error = "Email is required";
+      isValid = false;
     } else {
-      const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]+$/;
-      if (!emailRegex.test(newFormData.email.value)) {
-        newFormData.email.error = "Invalid email";
-      } else {
         newFormData.email.error = "";
     }
 
     if (!newFormData.gender.value) {
       newFormData.gender.error = "Gender is required";
+      isValid = false;
     } else {
       newFormData.gender.error = "";
     }
+
     setFormData(newFormData);
   }
 
@@ -193,5 +195,4 @@ export default function EditContactForm(
       </button>
     </form>
   );
-  }
 }
